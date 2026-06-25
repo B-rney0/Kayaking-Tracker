@@ -1,0 +1,19 @@
+print('Welcome to your kayaking tracker!')
+dist = int(input('How far did you go today in m?: '))
+time = int(input('How long was your moving time in minutes?: '))
+feel = int(input('On a 1-5 scale how did today feel 5 being best?: '))
+print('Great thanks for that info!')
+if feel in (1, 2):
+    print('Sounds like a tough session')
+elif feel == 3:
+    print('sounds like an ok session')
+elif feel == 4:
+    print('sounds like a good session')
+else:
+    print('sounds like an amaizning session!')
+a_s = (dist/1000)/(time/60) * 0.621371
+mpm = 60 / a_s
+print(f'today you adverages a time of {mpm:.2f} mins per mile good job')
+one_session = [dist, time, feel, mpm]
+sessions = []
+sessions.append(one_session)
